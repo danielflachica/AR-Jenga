@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 668
-  m_MinSize: {x: 917, y: 498}
-  m_MaxSize: {x: 22012, y: 14048}
+  m_MinSize: {x: 913, y: 498}
+  m_MaxSize: {x: 22008, y: 14048}
   vertical: 0
-  controlID: 41
+  controlID: 12
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 498}
   m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
-  controlID: 117
+  controlID: 13
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 274}
   m_MaxSize: {x: 14006, y: 10024}
   vertical: 0
-  controlID: 97
+  controlID: 68
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -411,9 +411,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.26546073, y: -0.2249271, z: -0.18852067}
+    m_Target: {x: -0.21448852, y: 0.073183656, z: 0.19627696}
     speed: 2
-    m_Value: {x: -0.26546073, y: -0.2249271, z: -0.18852067}
+    m_Value: {x: -0.21448852, y: 0.073183656, z: 0.19627696}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -441,13 +441,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: -0.23796108, y: -0.018358646, z: 0.004498635, w: -0.9710908}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: -0.23796108, y: -0.018358646, z: 0.004498635, w: -0.9710908}
   m_Size:
-    m_Target: 3.600276
+    m_Target: 1.2831264
     speed: 2
-    m_Value: 3.600276
+    m_Value: 1.2831264
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -592,7 +592,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Vuforia/Databases
+    - Assets/Vuforia/Scripts
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -629,10 +629,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 180}
+    scrollPos: {x: 0, y: 296}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000be270000c8270000442800006428000080280000dc280000ee2800002e2a0000762a0000aa2a0000882d00008a2d0000
+    m_ExpandedIDs: ffffffff00000000be270000c827000044280000642800007028000080280000dc280000ee2800002e2a0000762a0000aa2a0000882d00008a2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -716,23 +716,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e42a0000
-      m_LastClickedID: 10980
-      m_ExpandedIDs: d4fbffffd02a0000
+      m_SelectedIDs: d2fbffff
+      m_LastClickedID: -1070
+      m_ExpandedIDs: d4fbffffd02a0000d82a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Jenga Tower
+        m_OriginalName: Jenga Tower
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -1070
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 11}
       m_SearchString: 
