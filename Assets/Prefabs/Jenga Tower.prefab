@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 504397351525184131}
   - component: {fileID: 8930203127665837102}
   - component: {fileID: 6145673237820046207}
-  - component: {fileID: 3289359086606826631}
+  - component: {fileID: 6554285236618278018}
   m_Layer: 0
   m_Name: 0 (31)
   m_TagString: jengaBlock
@@ -92,7 +92,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3289359086606826631
+--- !u!54 &6554285236618278018
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,7 +104,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 9169113902947010931}
   - component: {fileID: 7919069093739678305}
   - component: {fileID: 4250608886587862911}
-  - component: {fileID: 2373839714269017881}
+  - component: {fileID: 5588443687085085593}
   m_Layer: 0
   m_Name: 0 (40)
   m_TagString: jengaBlock
@@ -200,7 +200,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &2373839714269017881
+--- !u!54 &5588443687085085593
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,7 +212,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 2367113893816752463}
   - component: {fileID: 6727752290124915760}
   - component: {fileID: 6984843294848746507}
-  - component: {fileID: 1904076494037897954}
+  - component: {fileID: 8156970510732280396}
   m_Layer: 0
   m_Name: 0 (26)
   m_TagString: jengaBlock
@@ -308,7 +308,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &1904076494037897954
+--- !u!54 &8156970510732280396
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,7 +320,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 5063687134585258066}
   - component: {fileID: 7628950049047710072}
   - component: {fileID: 4231631664528386177}
-  - component: {fileID: 4179963320694674319}
+  - component: {fileID: 7668908181879540526}
   m_Layer: 0
   m_Name: 0 (6)
   m_TagString: jengaBlock
@@ -416,7 +416,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4179963320694674319
+--- !u!54 &7668908181879540526
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -428,7 +428,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 654430610906403297}
   - component: {fileID: 205497594356167133}
   - component: {fileID: 645854959470766479}
-  - component: {fileID: 4157495193156790315}
+  - component: {fileID: 4806423955182124864}
   m_Layer: 0
   m_Name: 0 (1)
   m_TagString: jengaBlock
@@ -524,7 +524,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4157495193156790315
+--- !u!54 &4806423955182124864
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -536,7 +536,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 7573653592610806782}
   - component: {fileID: 2480542966975213898}
   - component: {fileID: 3252182271376740026}
-  - component: {fileID: 4743740675945718419}
+  - component: {fileID: 6014626191922149919}
   m_Layer: 0
   m_Name: 0 (37)
   m_TagString: jengaBlock
@@ -632,7 +632,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4743740675945718419
+--- !u!54 &6014626191922149919
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -644,7 +644,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -660,7 +660,7 @@ GameObject:
   - component: {fileID: 1264149454752104762}
   - component: {fileID: 7929906952482075772}
   - component: {fileID: 1482278173321496220}
-  - component: {fileID: 2351272404049170039}
+  - component: {fileID: 2746310841362483983}
   m_Layer: 0
   m_Name: 0 (20)
   m_TagString: jengaBlock
@@ -740,7 +740,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &2351272404049170039
+--- !u!54 &2746310841362483983
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -752,7 +752,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 6789070520622915599}
   - component: {fileID: 8922286192345067525}
   - component: {fileID: 7327846469987084139}
-  - component: {fileID: 6752355542299456956}
+  - component: {fileID: 9202041333466608732}
   m_Layer: 0
   m_Name: 0 (22)
   m_TagString: jengaBlock
@@ -848,7 +848,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &6752355542299456956
+--- !u!54 &9202041333466608732
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -860,7 +860,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -876,7 +876,7 @@ GameObject:
   - component: {fileID: 3891337742384246450}
   - component: {fileID: 1876184599274870540}
   - component: {fileID: 7826837439332464561}
-  - component: {fileID: 1163031058726494634}
+  - component: {fileID: 65033058801733804}
   m_Layer: 0
   m_Name: 0 (24)
   m_TagString: jengaBlock
@@ -956,7 +956,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &1163031058726494634
+--- !u!54 &65033058801733804
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -968,7 +968,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -984,7 +984,7 @@ GameObject:
   - component: {fileID: 5498700018054951678}
   - component: {fileID: 7013150049373687109}
   - component: {fileID: 4567698881131852414}
-  - component: {fileID: 9100070339805728747}
+  - component: {fileID: 5966733870707892972}
   m_Layer: 0
   m_Name: 0 (29)
   m_TagString: jengaBlock
@@ -1064,7 +1064,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &9100070339805728747
+--- !u!54 &5966733870707892972
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1076,7 +1076,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 4516182689469826669}
   - component: {fileID: 3191070077366662430}
   - component: {fileID: 6162927165960148009}
-  - component: {fileID: 4332878307572683458}
+  - component: {fileID: 1919432828709539354}
   m_Layer: 0
   m_Name: 0 (9)
   m_TagString: jengaBlock
@@ -1172,7 +1172,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4332878307572683458
+--- !u!54 &1919432828709539354
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1184,7 +1184,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1200,7 +1200,7 @@ GameObject:
   - component: {fileID: 6656246464188209281}
   - component: {fileID: 6668645649162775215}
   - component: {fileID: 7661774974691765541}
-  - component: {fileID: 7042763888500587195}
+  - component: {fileID: 2153149597815280721}
   m_Layer: 0
   m_Name: 0 (36)
   m_TagString: jengaBlock
@@ -1280,7 +1280,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &7042763888500587195
+--- !u!54 &2153149597815280721
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1292,7 +1292,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1308,7 +1308,7 @@ GameObject:
   - component: {fileID: 3981382076127663172}
   - component: {fileID: 5744523428712440154}
   - component: {fileID: 6236658353442218331}
-  - component: {fileID: 2628902983555240497}
+  - component: {fileID: 7063944495084938406}
   m_Layer: 0
   m_Name: 0 (7)
   m_TagString: jengaBlock
@@ -1388,7 +1388,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &2628902983555240497
+--- !u!54 &7063944495084938406
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1400,7 +1400,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1416,7 +1416,7 @@ GameObject:
   - component: {fileID: 4102402279802950529}
   - component: {fileID: 2015413457903020417}
   - component: {fileID: 7832862736027502948}
-  - component: {fileID: 2417323718552813388}
+  - component: {fileID: 3316873299912370808}
   m_Layer: 0
   m_Name: 0 (12)
   m_TagString: jengaBlock
@@ -1496,7 +1496,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &2417323718552813388
+--- !u!54 &3316873299912370808
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1508,7 +1508,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1524,7 +1524,7 @@ GameObject:
   - component: {fileID: 4827230189483060369}
   - component: {fileID: 4762830506322841288}
   - component: {fileID: 5383800315189669247}
-  - component: {fileID: 3878147293121562646}
+  - component: {fileID: 3443231173917006046}
   m_Layer: 0
   m_Name: 0 (30)
   m_TagString: jengaBlock
@@ -1604,7 +1604,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3878147293121562646
+--- !u!54 &3443231173917006046
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1616,7 +1616,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1710,7 +1710,7 @@ GameObject:
   - component: {fileID: 6231149463253755397}
   - component: {fileID: 5367124795787157834}
   - component: {fileID: 6564619853029939345}
-  - component: {fileID: 3269740255520266343}
+  - component: {fileID: 6398189680007596235}
   m_Layer: 0
   m_Name: 0 (43)
   m_TagString: jengaBlock
@@ -1790,7 +1790,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3269740255520266343
+--- !u!54 &6398189680007596235
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1802,7 +1802,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1818,7 +1818,7 @@ GameObject:
   - component: {fileID: 5425829014010028649}
   - component: {fileID: 7354100019024876350}
   - component: {fileID: 4907328839982610260}
-  - component: {fileID: 8158392434753565067}
+  - component: {fileID: 1686357016672799986}
   m_Layer: 0
   m_Name: 0 (45)
   m_TagString: jengaBlock
@@ -1898,7 +1898,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8158392434753565067
+--- !u!54 &1686357016672799986
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1910,7 +1910,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1926,7 +1926,7 @@ GameObject:
   - component: {fileID: 3685245502520866267}
   - component: {fileID: 6608740192218435351}
   - component: {fileID: 2724546495109366677}
-  - component: {fileID: 8353316612209042990}
+  - component: {fileID: 3619278964082272527}
   m_Layer: 0
   m_Name: 0 (42)
   m_TagString: jengaBlock
@@ -2006,7 +2006,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8353316612209042990
+--- !u!54 &3619278964082272527
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2018,7 +2018,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2034,7 +2034,7 @@ GameObject:
   - component: {fileID: 6786411381732186578}
   - component: {fileID: 6267764571111887610}
   - component: {fileID: 8327124829858626115}
-  - component: {fileID: 7379785308948065622}
+  - component: {fileID: 1058403364316585336}
   m_Layer: 0
   m_Name: 0 (28)
   m_TagString: jengaBlock
@@ -2114,7 +2114,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &7379785308948065622
+--- !u!54 &1058403364316585336
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2126,7 +2126,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2142,7 +2142,7 @@ GameObject:
   - component: {fileID: 2116846523294339227}
   - component: {fileID: 3620749160321945213}
   - component: {fileID: 1789204394402964067}
-  - component: {fileID: 1144812077175401571}
+  - component: {fileID: 3667334427373473651}
   m_Layer: 0
   m_Name: 0 (18)
   m_TagString: jengaBlock
@@ -2222,7 +2222,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &1144812077175401571
+--- !u!54 &3667334427373473651
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2234,7 +2234,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2250,7 +2250,7 @@ GameObject:
   - component: {fileID: 7455536953829402508}
   - component: {fileID: 6406420600740459360}
   - component: {fileID: 2364664804615641421}
-  - component: {fileID: 7126602469725540927}
+  - component: {fileID: 421962218341581179}
   m_Layer: 0
   m_Name: 0 (27)
   m_TagString: jengaBlock
@@ -2330,7 +2330,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &7126602469725540927
+--- !u!54 &421962218341581179
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2342,7 +2342,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2358,7 +2358,7 @@ GameObject:
   - component: {fileID: 2524181753683971379}
   - component: {fileID: 3282088194170846832}
   - component: {fileID: 6419933765817729851}
-  - component: {fileID: 2798948735208315487}
+  - component: {fileID: 3137602603688492675}
   m_Layer: 0
   m_Name: 0 (21)
   m_TagString: jengaBlock
@@ -2438,7 +2438,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &2798948735208315487
+--- !u!54 &3137602603688492675
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2450,7 +2450,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2466,7 +2466,7 @@ GameObject:
   - component: {fileID: 4420895634482293112}
   - component: {fileID: 6114768746901122377}
   - component: {fileID: 5651163602514241606}
-  - component: {fileID: 4880979864390901128}
+  - component: {fileID: 5939649893049968148}
   m_Layer: 0
   m_Name: 0 (13)
   m_TagString: jengaBlock
@@ -2546,7 +2546,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4880979864390901128
+--- !u!54 &5939649893049968148
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2558,7 +2558,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2574,7 +2574,7 @@ GameObject:
   - component: {fileID: 2028064906999648596}
   - component: {fileID: 7118722246535128822}
   - component: {fileID: 1326291643566039248}
-  - component: {fileID: 4570504945181516037}
+  - component: {fileID: 2655175113007999303}
   m_Layer: 0
   m_Name: 0 (47)
   m_TagString: jengaBlock
@@ -2654,7 +2654,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4570504945181516037
+--- !u!54 &2655175113007999303
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2666,7 +2666,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2682,7 +2682,7 @@ GameObject:
   - component: {fileID: 7060042760923917002}
   - component: {fileID: 4675778084424107654}
   - component: {fileID: 5266386924944044691}
-  - component: {fileID: 3037914918893369264}
+  - component: {fileID: 7026721732188261653}
   m_Layer: 0
   m_Name: 0 (5)
   m_TagString: jengaBlock
@@ -2762,7 +2762,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3037914918893369264
+--- !u!54 &7026721732188261653
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2774,7 +2774,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2790,7 +2790,7 @@ GameObject:
   - component: {fileID: 8042916682144659186}
   - component: {fileID: 3158122249470601142}
   - component: {fileID: 757728185463289409}
-  - component: {fileID: 1588536091341620744}
+  - component: {fileID: 8285096112256914257}
   m_Layer: 0
   m_Name: 0
   m_TagString: jengaBlock
@@ -2870,7 +2870,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &1588536091341620744
+--- !u!54 &8285096112256914257
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2882,7 +2882,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2898,7 +2898,7 @@ GameObject:
   - component: {fileID: 1664124778921930073}
   - component: {fileID: 2057016734099177220}
   - component: {fileID: 7136187253895710370}
-  - component: {fileID: 5528696301306835634}
+  - component: {fileID: 560820326870249113}
   m_Layer: 0
   m_Name: 0 (4)
   m_TagString: jengaBlock
@@ -2978,7 +2978,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &5528696301306835634
+--- !u!54 &560820326870249113
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2990,7 +2990,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3006,7 +3006,7 @@ GameObject:
   - component: {fileID: 2956204740661383878}
   - component: {fileID: 4872899341130040225}
   - component: {fileID: 1384025689217255434}
-  - component: {fileID: 5624393973779925358}
+  - component: {fileID: 2551222481865638007}
   m_Layer: 0
   m_Name: 0 (41)
   m_TagString: jengaBlock
@@ -3086,7 +3086,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &5624393973779925358
+--- !u!54 &2551222481865638007
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3098,7 +3098,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3114,7 +3114,7 @@ GameObject:
   - component: {fileID: 8583261546754525653}
   - component: {fileID: 8206464148705873489}
   - component: {fileID: 4964253128950686915}
-  - component: {fileID: 3354071021551942484}
+  - component: {fileID: 733652018121311812}
   m_Layer: 0
   m_Name: 0 (44)
   m_TagString: jengaBlock
@@ -3194,7 +3194,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3354071021551942484
+--- !u!54 &733652018121311812
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3206,7 +3206,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3222,7 +3222,7 @@ GameObject:
   - component: {fileID: 3041464744206073375}
   - component: {fileID: 5279626477699037992}
   - component: {fileID: 894821463023008501}
-  - component: {fileID: 5892823629746902261}
+  - component: {fileID: 4367843370043872258}
   m_Layer: 0
   m_Name: 0 (32)
   m_TagString: jengaBlock
@@ -3302,7 +3302,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &5892823629746902261
+--- !u!54 &4367843370043872258
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3314,7 +3314,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3330,7 +3330,7 @@ GameObject:
   - component: {fileID: 3048405312159715871}
   - component: {fileID: 6797390648328912479}
   - component: {fileID: 847668283101208514}
-  - component: {fileID: 164650356393391280}
+  - component: {fileID: 3404829683806967662}
   m_Layer: 0
   m_Name: 0 (10)
   m_TagString: jengaBlock
@@ -3410,7 +3410,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &164650356393391280
+--- !u!54 &3404829683806967662
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3422,7 +3422,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3438,7 +3438,7 @@ GameObject:
   - component: {fileID: 1685703331210380906}
   - component: {fileID: 6358857137548300548}
   - component: {fileID: 883490243116138949}
-  - component: {fileID: 6268876514498715667}
+  - component: {fileID: 7401130566394203965}
   m_Layer: 0
   m_Name: 0 (46)
   m_TagString: jengaBlock
@@ -3518,7 +3518,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &6268876514498715667
+--- !u!54 &7401130566394203965
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3530,7 +3530,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3546,7 +3546,7 @@ GameObject:
   - component: {fileID: 87542818250775905}
   - component: {fileID: 2704833479047507142}
   - component: {fileID: 6784120100716205497}
-  - component: {fileID: 4817852495437489168}
+  - component: {fileID: 4381280498048077933}
   m_Layer: 0
   m_Name: 0 (14)
   m_TagString: jengaBlock
@@ -3626,7 +3626,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4817852495437489168
+--- !u!54 &4381280498048077933
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3638,7 +3638,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3654,7 +3654,7 @@ GameObject:
   - component: {fileID: 517829693652551055}
   - component: {fileID: 4733386115090762322}
   - component: {fileID: 3174956945588551094}
-  - component: {fileID: 8496394854160335919}
+  - component: {fileID: 794550841194643050}
   m_Layer: 0
   m_Name: 0 (38)
   m_TagString: jengaBlock
@@ -3734,7 +3734,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8496394854160335919
+--- !u!54 &794550841194643050
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3746,7 +3746,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3762,7 +3762,7 @@ GameObject:
   - component: {fileID: 3474219475445136256}
   - component: {fileID: 7175448081887222859}
   - component: {fileID: 7950381749147771618}
-  - component: {fileID: 3703895131273962972}
+  - component: {fileID: 7680524656914567925}
   m_Layer: 0
   m_Name: 0 (17)
   m_TagString: jengaBlock
@@ -3842,7 +3842,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3703895131273962972
+--- !u!54 &7680524656914567925
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3854,7 +3854,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3870,7 +3870,7 @@ GameObject:
   - component: {fileID: 8256069314819907301}
   - component: {fileID: 8576186132917666295}
   - component: {fileID: 382900724521009303}
-  - component: {fileID: 8599673615455745394}
+  - component: {fileID: 6028895221792612466}
   m_Layer: 0
   m_Name: 0 (11)
   m_TagString: jengaBlock
@@ -3950,7 +3950,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8599673615455745394
+--- !u!54 &6028895221792612466
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3962,7 +3962,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3978,7 +3978,7 @@ GameObject:
   - component: {fileID: 2327457580234877937}
   - component: {fileID: 4333860421104033125}
   - component: {fileID: 2044548511370739024}
-  - component: {fileID: 8775741343789069544}
+  - component: {fileID: 6832181905032616566}
   m_Layer: 0
   m_Name: 0 (15)
   m_TagString: jengaBlock
@@ -4058,7 +4058,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8775741343789069544
+--- !u!54 &6832181905032616566
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4070,7 +4070,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4086,7 +4086,7 @@ GameObject:
   - component: {fileID: 5847147043404207784}
   - component: {fileID: 2233849793155552688}
   - component: {fileID: 5920591489754666604}
-  - component: {fileID: 4741616765710759567}
+  - component: {fileID: 804217010903129507}
   m_Layer: 0
   m_Name: 0 (25)
   m_TagString: jengaBlock
@@ -4166,7 +4166,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4741616765710759567
+--- !u!54 &804217010903129507
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4178,7 +4178,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4194,7 +4194,7 @@ GameObject:
   - component: {fileID: 3817997708584008795}
   - component: {fileID: 7458009689121791586}
   - component: {fileID: 2137334628835697679}
-  - component: {fileID: 3737988462954605859}
+  - component: {fileID: 3489073728425758783}
   m_Layer: 0
   m_Name: 0 (35)
   m_TagString: jengaBlock
@@ -4274,7 +4274,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3737988462954605859
+--- !u!54 &3489073728425758783
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4286,7 +4286,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4302,7 +4302,7 @@ GameObject:
   - component: {fileID: 5691038118841476420}
   - component: {fileID: 4800175902949180900}
   - component: {fileID: 4162577527462513293}
-  - component: {fileID: 6155068854484836335}
+  - component: {fileID: 6339781191495557829}
   m_Layer: 0
   m_Name: 0 (39)
   m_TagString: jengaBlock
@@ -4382,7 +4382,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &6155068854484836335
+--- !u!54 &6339781191495557829
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4394,7 +4394,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4410,7 +4410,7 @@ GameObject:
   - component: {fileID: 4385765635372412536}
   - component: {fileID: 6831565362893385171}
   - component: {fileID: 5611715678387370311}
-  - component: {fileID: 5540667271845112381}
+  - component: {fileID: 1057319883938758022}
   m_Layer: 0
   m_Name: 0 (34)
   m_TagString: jengaBlock
@@ -4490,7 +4490,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &5540667271845112381
+--- !u!54 &1057319883938758022
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4502,7 +4502,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4518,7 +4518,7 @@ GameObject:
   - component: {fileID: 6260362252958564869}
   - component: {fileID: 2163640742058487030}
   - component: {fileID: 5186610626202068018}
-  - component: {fileID: 6015304980525280327}
+  - component: {fileID: 5475097450101593542}
   m_Layer: 0
   m_Name: 0 (33)
   m_TagString: jengaBlock
@@ -4598,7 +4598,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &6015304980525280327
+--- !u!54 &5475097450101593542
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4610,7 +4610,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4626,7 +4626,7 @@ GameObject:
   - component: {fileID: 6555425388822665207}
   - component: {fileID: 4659451669488092045}
   - component: {fileID: 5907063649892780912}
-  - component: {fileID: 4056347084165667457}
+  - component: {fileID: 1065712532352540917}
   m_Layer: 0
   m_Name: 0 (2)
   m_TagString: jengaBlock
@@ -4706,7 +4706,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4056347084165667457
+--- !u!54 &1065712532352540917
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4718,7 +4718,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4734,7 +4734,7 @@ GameObject:
   - component: {fileID: 343402430646173271}
   - component: {fileID: 1802367826017167224}
   - component: {fileID: 3219498970382118789}
-  - component: {fileID: 541347095948117183}
+  - component: {fileID: 7476627811445564758}
   m_Layer: 0
   m_Name: 0 (19)
   m_TagString: jengaBlock
@@ -4814,7 +4814,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &541347095948117183
+--- !u!54 &7476627811445564758
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4826,7 +4826,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4842,7 +4842,7 @@ GameObject:
   - component: {fileID: 7978903761887671343}
   - component: {fileID: 6729204195147882678}
   - component: {fileID: 3480258097926070439}
-  - component: {fileID: 5718183844743530148}
+  - component: {fileID: 516051085279029984}
   m_Layer: 0
   m_Name: 0 (3)
   m_TagString: jengaBlock
@@ -4922,7 +4922,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &5718183844743530148
+--- !u!54 &516051085279029984
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4934,7 +4934,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4950,7 +4950,7 @@ GameObject:
   - component: {fileID: 5276468791511675776}
   - component: {fileID: 216100406863010803}
   - component: {fileID: 6169636063400426127}
-  - component: {fileID: 4583031031538158323}
+  - component: {fileID: 6175529127669858854}
   m_Layer: 0
   m_Name: 0 (16)
   m_TagString: jengaBlock
@@ -5030,7 +5030,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4583031031538158323
+--- !u!54 &6175529127669858854
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5042,7 +5042,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -5058,7 +5058,7 @@ GameObject:
   - component: {fileID: 5671035534313512104}
   - component: {fileID: 8303727658270901043}
   - component: {fileID: 3798015065946481206}
-  - component: {fileID: 8996448157246308892}
+  - component: {fileID: 507689212937030226}
   m_Layer: 0
   m_Name: 0 (8)
   m_TagString: jengaBlock
@@ -5138,7 +5138,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8996448157246308892
+--- !u!54 &507689212937030226
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5150,7 +5150,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -5166,7 +5166,7 @@ GameObject:
   - component: {fileID: 854264069634017853}
   - component: {fileID: 1563696894363855519}
   - component: {fileID: 4094833606538877949}
-  - component: {fileID: 5465292399680663821}
+  - component: {fileID: 7656720880435961279}
   m_Layer: 0
   m_Name: 0 (23)
   m_TagString: jengaBlock
@@ -5246,7 +5246,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &5465292399680663821
+--- !u!54 &7656720880435961279
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5258,7 +5258,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
