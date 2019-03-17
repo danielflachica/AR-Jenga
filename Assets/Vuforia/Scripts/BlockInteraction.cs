@@ -2,60 +2,59 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockInteraction : MonoBehaviour
+public class BlockInteraction
 {
-    public Camera arCamera;
-    public float minimumDistance  = 100;
-    public GameObject go;
+    public Color highlightColor = new Color(0f, 200f, 0f);
+    public static bool selected;
 
-    // Start is called before the first frame update
-    void Start()
+    // highlight the selected object
+    public void highlightObject(GameObject go)
     {
-        Debug.Log("Starts the arcamera script");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Debug.Log("updates the arcamera script");
-        if (Input.mousePresent == true)
+        if (!selected)
         {
-            // Touches performed on screen
-            Ray ray;
-            RaycastHit hit;
-            //Debug.Log("2");
-
-            if (Input.GetMouseButton(0))
+            Renderer rend = go.GetComponent<Renderer>();
+            rend.material.color += highlightColor;
+            selected = true;
+            foreach (Renderer r in go.GetComponentsInChildren<Renderer>())
             {
-                Debug.Log("Mouse is clicked");
-                ray = arCamera.ScreenPointToRay(Input.mousePosition);
-                hit = new RaycastHit();
-                //Debug.Log("33");
-                if (Physics.Raycast(ray, out hit))
-                {
-
-                    if (hit.collider.gameObject.tag == "jengaBlock")
-                    {
-                        Debug.Log("Hits jenga block");
-                        go = hit.transform.gameObject;
-                        Debug.Log("Touch Detected on : " + go.name);
-                        
-                    }
-
-                }
+                r.material.color += highlightColor;
             }
         }
+    }
 
-        /*RaycastHit hit;
-        Touch touch = Input.GetTouch(0);
-        Ray pointToBlock = new Ray(arCamera.transform.position, touch.position);
-
-        if(Physics.Raycast(pointToBlock, out hit, minimumDistance))
+    public void unHighlightObject(GameObject go)
+    {
+        Renderer rend = go.GetComponent<Renderer>();
+        rend.material.color -= highlightColor;
+        selected = false;
+        foreach (Renderer r in go.GetComponentsInChildren<Renderer>())
         {
-            if(hit.collider.tag == "block")
-            {
-                Debug.Log("Hit Something");
-            }
-        }*/
+            r.material.color -= highlightColor;
+        }
+    }
+
+    public bool getStatus()
+    {
+        return selected;
+    }
+
+    public void tether(Camera camera, GameObject block) 
+    {
+        Vector3 tempCameraPosition, currentCameraPosition, diffCameraPosition,diff;
+        Vector3 tempBlockPosition, currentBlockPosition, diffBlockPosition;
+
+        if (getStatus())
+        {
+            block.GetComponent<Rigidbody>().useGravity = false;
+            block.GetComponent<Rigidbody>().isKinematic = true;
+
+            Debug.Log("Tethered!!!");
+            currentCameraPosition = camera.transform.position;
+            currentBlockPosition = block.transform.position;
+
+            diff = currentBlockPosition - currentCameraPosition;
+
+            currentBlockPosition += diff;
+        }
     }
 }

@@ -1389,7 +1389,7 @@ GameObject:
   - component: {fileID: 738503229}
   - component: {fileID: 738503228}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Release Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1412,8 +1412,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19, y: -344}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -2.1, y: -305.3}
+  m_SizeDelta: {x: 202.2, y: 107.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738503228
 MonoBehaviour:
@@ -1646,10 +1646,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 30
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
+    m_BestFit: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1657,7 +1657,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Put Jenga
+  m_Text: Release
 --- !u!222 &1712781045
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1711,8 +1711,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arCamera: {fileID: 186296990}
   tower: {fileID: 1235979353}
+  block: {fileID: 0}
   plane: {fileID: 613254563}
   planeFinder: {fileID: 1904954454}
+  canvas: {fileID: 255576029}
 --- !u!1 &1904954454
 GameObject:
   m_ObjectHideFlags: 0

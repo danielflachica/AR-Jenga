@@ -7,22 +7,51 @@ public class GameManager : MonoBehaviour
 
     public Camera arCamera;
     public GameObject tower;
+    public GameObject block;
     public GameObject plane;
     public GameObject planeFinder;
+    public GameObject canvas;
     private bool isPlaced = false;
     private bool isKinematic = true;
+    private BlockInteraction interactor;
 
     // Start is called before the first frame update
     void Start()
     {
-           
+        interactor = new BlockInteraction();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Ray ray;
-        RaycastHit hit;
+            
+
+        // if player touches the screen
+        if (Input.GetMouseButton(0))
+        {
+            Ray ray;
+            RaycastHit hit;
+
+            Debug.Log("Mouse is clicked");
+            ray = arCamera.ScreenPointToRay(Input.mousePosition);
+            hit = new RaycastHit();
+
+            //if player taps a block within range
+            if (Physics.Raycast(ray, out hit, 50))
+            {
+                if (hit.collider.gameObject.tag == "jengaBlock")
+                {
+                    Debug.Log("Hits jenga block");
+                    block = hit.transform.gameObject;
+                    Debug.Log("Touch Detected on block: " + block.name);
+
+                    interactor.highlightObject(block);
+
+                    enableCanvas();
+                }
+
+            }
+        }
 
         if (planeFinder.activeSelf == false && isPlaced == false)
         {
@@ -41,27 +70,6 @@ public class GameManager : MonoBehaviour
         }
 
 
-
-        if (Input.GetMouseButton(0))
-        {
-            Debug.Log("Mouse is clicked");
-            ray = arCamera.ScreenPointToRay(Input.mousePosition);
-            hit = new RaycastHit();
-            //Debug.Log("33");
-            if (Physics.Raycast(ray, out hit, 50))
-            {
-                if (hit.collider.gameObject.tag == "jengaBlock")
-                {
-                    Debug.Log("Hits jenga block");
-                    tower = hit.transform.gameObject;
-                    Debug.Log("Touch Detected on : " + tower.name);
-
-                }
-
-            }
-        }
-
-
     }
 
     public void unKinematic(int pieces)
@@ -77,5 +85,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void enableCanvas()
+    {
+        canvas.SetActive(true);
+    }
+
+    public void disableCanvas()
+    {
+        canvas.SetActive(false);
+    }
     
 }
