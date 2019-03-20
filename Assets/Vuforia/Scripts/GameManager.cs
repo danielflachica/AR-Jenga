@@ -47,16 +47,16 @@ public class GameManager : MonoBehaviour
             // Fraction of journey completed = current distance divided by total distance.
             float fracJourney = distCovered / journeyLength;
 
-            offset = arCamera.transform.localPosition - block.transform.localPosition;
-
             // Set our position as a fraction of the distance between the markers.
-            transform.position = Vector3.Lerp(arCamera.transform.position, block.transform.position + offset, fracJourney);
+            block.transform.position = Vector3.Lerp(block.transform.position, arCamera.transform.position+offset, fracJourney);
 
             /*Debug.Log("camera position: " + arCamera.transform.localPosition);
-            offset = arCamera.transform.localPosition - block.transform.localPosition;
+            
             Debug.Log("block old position: "+ block.transform.localPosition);
             block.transform.localPosition = arCamera.transform.localPosition + offset;
             Debug.Log("block new position: " + block.transform.localPosition);*/
+
+            
         }
 
         // if player touches the screen
@@ -80,16 +80,18 @@ public class GameManager : MonoBehaviour
                     block.GetComponent<Rigidbody>().useGravity = false;
                     block.GetComponent<Rigidbody>().isKinematic = true;
                     Debug.Log("Touch Detected on block: " + block.name);
-
+                    offset = arCamera.transform.localPosition - block.transform.localPosition;
                     interactor.highlightObject(block);
                     isTethered = true;
                     enableCanvas();
 
                     // Keep a note of the time the movement started.
                     startTime = Time.time;
-
+                    //offset = arCamera.transform.position - block.transform.position;
                     // Calculate the journey length.
                     journeyLength = Vector3.Distance(arCamera.transform.position, block.transform.position);
+
+                    Debug.Log("Journey Length: " + journeyLength);
                 }
 
             }
