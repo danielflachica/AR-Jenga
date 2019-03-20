@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             float fracJourney = distCovered / journeyLength;
 
             // Set our position as a fraction of the distance between the markers.
-            block.transform.position = Vector3.Lerp(block.transform.position, arCamera.transform.position+offset, fracJourney);
+            block.transform.position = Vector3.Lerp(block.transform.position, arCamera.transform.position-offset, fracJourney);
 
             /*Debug.Log("camera position: " + arCamera.transform.localPosition);
             
@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
             tower.active = true;
             Debug.Log("Tower has been placed");
 
-            int piecesCount = tower.transform.GetChildCount();
+            int piecesCount = tower.transform.childCount;
 
             if (isKinematic)
             {

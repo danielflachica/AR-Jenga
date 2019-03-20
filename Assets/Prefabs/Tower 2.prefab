@@ -1306,7 +1306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4752816366994242}
   m_Layer: 0
-  m_Name: Tower 1
+  m_Name: Tower 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1321,7 +1321,7 @@ Transform:
   m_GameObject: {fileID: 1418823296255530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.49954, y: 7.49954, z: 7.49954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4060604628174954}
   - {fileID: 4302632408966944}
