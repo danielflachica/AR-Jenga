@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
 
                     // Keep a note of the time the movement started.
                     startTime = Time.time;
-                    //offset = arCamera.transform.position - block.transform.position;
+                    offset = arCamera.transform.position - block.transform.position;
                     // Calculate the journey length.
                     journeyLength = Vector3.Distance(arCamera.transform.position, block.transform.position);
 
