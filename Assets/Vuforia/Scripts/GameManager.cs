@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject plane;
     public GameObject planeFinder;
     public GameObject canvas;
+    public Button releaseBtn;
     private bool isPlaced = false;
     private bool isKinematic = true;
     private bool isTethered = false;
@@ -31,15 +33,18 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         interactor = new BlockInteraction();
+        releaseBtn.onClick.AddListener(releaseBlock);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        
+
         if (isTethered)
         {
-            Debug.Log("Tethered block!");
+            //Debug.Log("Tethered block!");
 
             // Distance moved = time * speed.
             float distCovered = (Time.time - startTime) * speed;
@@ -60,7 +65,7 @@ public class GameManager : MonoBehaviour
         }
 
         // if player touches the screen
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && interactor.getStatus() == false)
         {
             Ray ray;
             RaycastHit hit;
@@ -81,6 +86,7 @@ public class GameManager : MonoBehaviour
                     block.GetComponent<Rigidbody>().isKinematic = true;
                     Debug.Log("Touch Detected on block: " + block.name);
                     offset = arCamera.transform.localPosition - block.transform.localPosition;
+                    interactor.setStatus(false);
                     interactor.highlightObject(block);
                     isTethered = true;
                     enableCanvas();
@@ -99,7 +105,7 @@ public class GameManager : MonoBehaviour
 
         if (planeFinder.activeSelf == false && isPlaced == false)
         {
-            tower.active = true;
+            tower.SetActive(true);
             Debug.Log("Tower has been placed");
 
             int piecesCount = tower.transform.childCount;
@@ -114,6 +120,16 @@ public class GameManager : MonoBehaviour
         }
 
 
+    }
+
+    public void releaseBlock()
+    {
+        block.GetComponent<Rigidbody>().useGravity = true;
+        block.GetComponent<Rigidbody>().isKinematic = false;
+        isTethered = false;
+        canvas.SetActive(false);
+        interactor.unHighlightObject(block);
+        block = null;
     }
 
     public void unKinematic(int pieces)

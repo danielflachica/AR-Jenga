@@ -24,13 +24,17 @@ public class BlockInteraction
 
     public void unHighlightObject(GameObject go)
     {
-        Renderer rend = go.GetComponent<Renderer>();
-        rend.material.color -= highlightColor;
-        selected = false;
-        foreach (Renderer r in go.GetComponentsInChildren<Renderer>())
+        if(selected == true)
         {
-            r.material.color -= highlightColor;
+            Renderer rend = go.GetComponent<Renderer>();
+            rend.material.color -= highlightColor;
+            selected = false;
+            foreach (Renderer r in go.GetComponentsInChildren<Renderer>())
+            {
+                r.material.color -= highlightColor;
+            }
         }
+        
     }
 
     public bool getStatus()
@@ -38,23 +42,8 @@ public class BlockInteraction
         return selected;
     }
 
-    public void tether(Camera camera, GameObject block) 
+    public void setStatus(bool stat)
     {
-        Vector3 tempCameraPosition, currentCameraPosition, diffCameraPosition,diff;
-        Vector3 tempBlockPosition, currentBlockPosition, diffBlockPosition;
-
-        if (getStatus())
-        {
-            block.GetComponent<Rigidbody>().useGravity = false;
-            block.GetComponent<Rigidbody>().isKinematic = true;
-
-            Debug.Log("Tethered!!!");
-            currentCameraPosition = camera.transform.position;
-            currentBlockPosition = block.transform.position;
-
-            diff = currentBlockPosition - currentCameraPosition;
-
-            currentBlockPosition += diff;
-        }
+        selected = stat;
     }
 }
