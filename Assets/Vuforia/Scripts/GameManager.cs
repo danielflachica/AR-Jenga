@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject plane;
     public GameObject planeFinder;
     public GameObject canvas;
+    public GameObject blockControlPanel;
     public Button releaseBtn;
     private bool isPlaced = false;
     private bool isKinematic = true;
@@ -70,7 +72,7 @@ public class GameManager : MonoBehaviour
             Ray ray;
             RaycastHit hit;
 
-            Debug.Log("Mouse is clicked");
+            //Debug.Log("Mouse is clicked");
             ray = arCamera.ScreenPointToRay(Input.mousePosition);
             hit = new RaycastHit();
 
@@ -80,11 +82,11 @@ public class GameManager : MonoBehaviour
                 if (hit.collider.gameObject.tag == "jengaBlock")
                 {
 
-                    Debug.Log("Hits jenga block");
+                    //Debug.Log("Hits jenga block");
                     block = hit.transform.gameObject;
                     block.GetComponent<Rigidbody>().useGravity = false;
                     block.GetComponent<Rigidbody>().isKinematic = true;
-                    Debug.Log("Touch Detected on block: " + block.name);
+                    //Debug.Log("Touch Detected on block: " + block.name);
                     offset = arCamera.transform.localPosition - block.transform.localPosition;
                     interactor.setStatus(false);
                     interactor.highlightObject(block);
@@ -97,7 +99,7 @@ public class GameManager : MonoBehaviour
                     // Calculate the journey length.
                     journeyLength = Vector3.Distance(arCamera.transform.position, block.transform.position);
 
-                    Debug.Log("Journey Length: " + journeyLength);
+                    //Debug.Log("Journey Length: " + journeyLength);
                 }
 
             }
@@ -148,11 +150,17 @@ public class GameManager : MonoBehaviour
     public void enableCanvas()
     {
         canvas.SetActive(true);
+
+        blockControlPanel.SetActive(true);
+        
+
     }
 
     public void disableCanvas()
     {
         canvas.SetActive(false);
+
+        blockControlPanel.SetActive(false);
     }
     
 }
