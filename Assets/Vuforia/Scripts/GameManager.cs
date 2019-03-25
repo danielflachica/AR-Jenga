@@ -14,12 +14,15 @@ public class GameManager : MonoBehaviour
     public GameObject planeFinder;
     public GameObject canvas;
     public GameObject blockControlPanel;
+    public GameObject tutorialPanel;
     public Button releaseBtn;
     private bool isPlaced = false;
     private bool isKinematic = true;
     private bool isTethered = false;
     private BlockInteraction interactor;
     private Vector3 offset;
+    private int stepNum;
+    private bool completedStep = false;
 
     // Time when the movement started.
     private float startTime;
@@ -36,13 +39,13 @@ public class GameManager : MonoBehaviour
     {
         interactor = new BlockInteraction();
         releaseBtn.onClick.AddListener(releaseBlock);
+        tutorialPanel.SetActive(true);
+        stepNum = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        
 
         if (isTethered)
         {
@@ -66,7 +69,7 @@ public class GameManager : MonoBehaviour
             
         }
 
-        // if player touches the screen
+        // if player touches the screen and no block has been selected yet
         if (Input.GetMouseButton(0) && interactor.getStatus() == false)
         {
             Ray ray;
@@ -91,7 +94,9 @@ public class GameManager : MonoBehaviour
                     interactor.setStatus(false);
                     interactor.highlightObject(block);
                     isTethered = true;
+
                     enableCanvas();
+                    enableBlockControlPanel();
 
                     // Keep a note of the time the movement started.
                     startTime = Time.time;
@@ -100,6 +105,9 @@ public class GameManager : MonoBehaviour
                     journeyLength = Vector3.Distance(arCamera.transform.position, block.transform.position);
 
                     //Debug.Log("Journey Length: " + journeyLength);
+
+                    setCompletedStatus(true);
+                    incrementStep();
                 }
 
             }
@@ -109,7 +117,7 @@ public class GameManager : MonoBehaviour
         {
             tower.SetActive(true);
             Debug.Log("Tower has been placed");
-
+            
             int piecesCount = tower.transform.childCount;
 
             if (isKinematic)
@@ -119,6 +127,9 @@ public class GameManager : MonoBehaviour
             }
 
             isPlaced = true;
+
+            setCompletedStatus(true);
+            incrementStep();
         }
 
 
@@ -129,6 +140,7 @@ public class GameManager : MonoBehaviour
         block.GetComponent<Rigidbody>().useGravity = true;
         block.GetComponent<Rigidbody>().isKinematic = false;
         isTethered = false;
+        disableBlockControlPanel();
         canvas.SetActive(false);
         interactor.unHighlightObject(block);
         block = null;
@@ -150,17 +162,44 @@ public class GameManager : MonoBehaviour
     public void enableCanvas()
     {
         canvas.SetActive(true);
-
-        blockControlPanel.SetActive(true);
-        
-
     }
 
     public void disableCanvas()
     {
         canvas.SetActive(false);
+    }
+
+    public void enableBlockControlPanel()
+    {
+
+        blockControlPanel.SetActive(true);
+     
+    }
+
+    public void disableBlockControlPanel()
+    {
 
         blockControlPanel.SetActive(false);
     }
+
+    public int getStep()
+    {
+        return stepNum;
+    }
     
+    public bool getStepStatus()
+    {
+        return completedStep;
+    }
+   
+    public void setCompletedStatus(bool status)
+    {
+        completedStep = status;
+    }
+
+    public void incrementStep()
+    {
+        stepNum++;
+        Debug.Log("Step number: " + stepNum);
+    }
 }
