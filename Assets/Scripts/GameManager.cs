@@ -14,15 +14,12 @@ public class GameManager : MonoBehaviour
     public GameObject planeFinder;
     public GameObject canvas;
     public GameObject blockControlPanel;
-    public GameObject tutorialPanel;
     public Button releaseBtn;
     private bool isPlaced = false;
     private bool isKinematic = true;
     private bool isTethered = false;
     private BlockInteraction interactor;
     private Vector3 offset;
-    private int stepNum;
-    private bool completedStep = false;
 
     // Time when the movement started.
     private float startTime;
@@ -39,8 +36,6 @@ public class GameManager : MonoBehaviour
     {
         interactor = new BlockInteraction();
         releaseBtn.onClick.AddListener(releaseBlock);
-        tutorialPanel.SetActive(true);
-        stepNum = 1;
     }
 
     // Update is called once per frame
@@ -106,8 +101,6 @@ public class GameManager : MonoBehaviour
 
                     //Debug.Log("Journey Length: " + journeyLength);
 
-                    setCompletedStatus(true);
-                    incrementStep();
                 }
 
             }
@@ -127,9 +120,6 @@ public class GameManager : MonoBehaviour
             }
 
             isPlaced = true;
-
-            setCompletedStatus(true);
-            incrementStep();
         }
 
 
@@ -182,24 +172,4 @@ public class GameManager : MonoBehaviour
         blockControlPanel.SetActive(false);
     }
 
-    public int getStep()
-    {
-        return stepNum;
-    }
-    
-    public bool getStepStatus()
-    {
-        return completedStep;
-    }
-   
-    public void setCompletedStatus(bool status)
-    {
-        completedStep = status;
-    }
-
-    public void incrementStep()
-    {
-        stepNum++;
-        Debug.Log("Step number: " + stepNum);
-    }
 }

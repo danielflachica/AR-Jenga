@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class TutorialPanel : MonoBehaviour
 {
-    public GameObject intro, towerPlace, jengaSelect, jengaPull, jengaMove, complete;
+    public GameObject intro, towerPlace, jengaSelect, jengaPull, jengaMove, jengaDrop, complete;
     public Button introBtn, completeBtn;
-    public GameManager gm;
+    public TutorialManager gm;
     private bool panelActive = false; //a tutorial step g.o. hasnt been shown yet
     private bool completedStep;
 
@@ -53,6 +53,11 @@ public class TutorialPanel : MonoBehaviour
                     gm.setCompletedStatus(false);
                     break;
                 case 6:
+                    jengaDrop.SetActive(false);
+                    panelActive = false;
+                    gm.setCompletedStatus(false);
+                    break;
+                case 7:
                     complete.SetActive(false);
                     panelActive = false;
                     gm.setCompletedStatus(false);
@@ -92,6 +97,11 @@ public class TutorialPanel : MonoBehaviour
                     completedStep = false;
                     break;
                 case 6:
+                    jengaDrop.SetActive(true);
+                    panelActive = true;
+                    completedStep = false;
+                    break;
+                case 7:
                     complete.SetActive(true);
                     panelActive = true;
                     completedStep = false;
