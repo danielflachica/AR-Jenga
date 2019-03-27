@@ -60,8 +60,10 @@ public class TutorialManager : MonoBehaviour
             // Fraction of journey completed = current distance divided by total distance.
             float fracJourney = distCovered / journeyLength;
 
+            //change block position per update
+            block.transform.position = Vector3.Lerp(block.transform.position, arCamera.transform.position - offset, fracJourney);
 
-            if(Vector3.Distance(block.transform.position, blockStartPos) > 0.1 && !getStepStatus() && getStep() == 4)
+            if (Vector3.Distance(block.transform.position, blockStartPos) > 0.1 && !getStepStatus() && getStep() == 4)
             {
                 Debug.Log("Moved enough distance!");
                 topOfTower.SetActive(true);
