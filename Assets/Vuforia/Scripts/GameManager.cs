@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject canvas;
     public GameObject blockControlPanel;
     public Button releaseBtn;
+    public Button rotateBtn;
     private bool isPlaced = false;
     private bool isKinematic = true;
     private bool isTethered = false;

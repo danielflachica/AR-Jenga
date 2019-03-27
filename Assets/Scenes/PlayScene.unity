@@ -2685,6 +2685,7 @@ MonoBehaviour:
   canvas: {fileID: 255576029}
   blockControlPanel: {fileID: 780585092}
   releaseBtn: {fileID: 738503228}
+  rotateBtn: {fileID: 331936192}
   speed: 1
 --- !u!1 &1838285123
 GameObject:

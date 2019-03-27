@@ -5,3 +5,8 @@ Library/assetDatabase3
 *.txt
 *.info
 *.txt
+*.info
+*.dll
+*.pdb
+*.json
+*.stamp
