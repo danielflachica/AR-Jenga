@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     {
         interactor = new BlockInteraction();
         releaseBtn.onClick.AddListener(releaseBlock);
+        rotateBtn.onClick.AddListener(rotateBlock);
     }
 
     // Update is called once per frame
@@ -133,6 +134,11 @@ public class GameManager : MonoBehaviour
         canvas.SetActive(false);
         interactor.unHighlightObject(block);
         block = null;
+    }
+
+    public void rotateBlock()
+    {
+        block.transform.Rotate(Vector3.up, 50f * Time.deltaTime);
     }
 
     public void unKinematic(int pieces)
