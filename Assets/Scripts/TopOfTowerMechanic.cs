@@ -9,10 +9,12 @@ public class TopOfTowerMechanic : MonoBehaviour
 
     public GameObject topBlockPos;
 
+    private bool dropZone;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        dropZone = false;
     }
 
     // Update is called once per frame
@@ -26,8 +28,8 @@ public class TopOfTowerMechanic : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-
+        if(other.name == gm.block.name)
+            gm.setDropStatus(true);
     }
 
 
