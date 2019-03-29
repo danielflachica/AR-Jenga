@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             float fracJourney = distCovered / journeyLength;
 
             // Set our position as a fraction of the distance between the markers.
-            //block.transform.position = Vector3.Lerp(block.transform.position, arCamera.transform.position-offset, fracJourney);
+            block.transform.position = Vector3.Lerp(block.transform.position, arCamera.transform.position-offset, fracJourney);
 
             /*Debug.Log("camera position: " + arCamera.transform.localPosition);
             
