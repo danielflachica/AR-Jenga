@@ -3631,7 +3631,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1555583436}
   - component: {fileID: 1555583438}
-  - component: {fileID: 1555583437}
   - component: {fileID: 1555583439}
   m_Layer: 0
   m_Name: Top of Tower
@@ -3654,19 +3653,6 @@ Transform:
   m_Father: {fileID: 380823763}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1555583437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555583435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20b532ea8e3296441a5c45f3ca6fb7f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 1925651736}
 --- !u!65 &1555583438
 BoxCollider:
   m_ObjectHideFlags: 0

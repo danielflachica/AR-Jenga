@@ -99,6 +99,9 @@ public class TutorialManager : MonoBehaviour
                     interactor.highlightObject(block);
                     isTethered = true;
 
+                    //make block hard to move other blocks
+                    block.GetComponent<Rigidbody>().mass = 1;
+
                     enableCanvas();
                     enableBlockControlPanel();
 
@@ -151,7 +154,10 @@ public class TutorialManager : MonoBehaviour
         isTethered = false;
         disableBlockControlPanel();
         interactor.unHighlightObject(block);
-        block = null;
+        //block = null;
+
+        block.GetComponent<Rigidbody>().mass = 3;
+
         topOfTower.SetActive(false);
 
         //implement middle block positioning
