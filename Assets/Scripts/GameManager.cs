@@ -15,12 +15,17 @@ public class GameManager : MonoBehaviour
     public GameObject canvas;
     public GameObject blockControlPanel;
     public Button releaseBtn;
+    public Text scorePanel;
     private bool isPlaced = false;
     private bool isKinematic = true;
     private bool isTethered = false;
     private BlockInteraction interactor;
     private Vector3 offset;
     private int topStackCount;
+    private ScoringScript ss;
+    private Vector3 blockOriginPos;
+    private bool dropZone;
+    public GameObject topOfTower;
 
     // Time when the movement started.
     private float startTime;
@@ -38,6 +43,8 @@ public class GameManager : MonoBehaviour
         interactor = new BlockInteraction();
         releaseBtn.onClick.AddListener(releaseBlock);
         topStackCount = 0;
+        ss = new ScoringScript();
+        dropZone = false;
     }
 
     // Update is called once per frame
@@ -55,7 +62,7 @@ public class GameManager : MonoBehaviour
             float fracJourney = distCovered / journeyLength;
 
             // Set our position as a fraction of the distance between the markers.
-            block.transform.position = Vector3.Lerp(block.transform.position, arCamera.transform.position-offset, fracJourney);
+            //block.transform.position = Vector3.Lerp(block.transform.position, arCamera.transform.position-offset, fracJourney);
 
             /*Debug.Log("camera position: " + arCamera.transform.localPosition);
             
@@ -94,6 +101,8 @@ public class GameManager : MonoBehaviour
 
                     //to make the block less sensitive to the other blocks
                     block.GetComponent<Rigidbody>().mass = 1;
+                    //get origin pos of block
+                    blockOriginPos = block.transform.position;
 
                     enableCanvas();
                     enableBlockControlPanel();
@@ -127,20 +136,32 @@ public class GameManager : MonoBehaviour
             isPlaced = true;
         }
 
+        scorePanel.text = "Score: "+ss.getScore();
 
+
+    }
+
+    public void setDropStatus(bool stat)
+    {
+        dropZone = stat;
     }
 
     public void releaseBlock()
     {
+        if (dropZone)
+            ss.Score();
+
         block.GetComponent<Rigidbody>().useGravity = true;
         block.GetComponent<Rigidbody>().isKinematic = false;
         isTethered = false;
         disableBlockControlPanel();
-        canvas.SetActive(false);
+        //canvas.SetActive(false);
         interactor.unHighlightObject(block);
         incrementTopStackCount();
         block.GetComponent<Rigidbody>().mass = 3;
         //block = null;
+
+        setDropStatus(false);
     }
 
     public void incrementTopStackCount()
