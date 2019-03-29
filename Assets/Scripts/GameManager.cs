@@ -42,8 +42,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        
-
         if (isTethered)
         {
             //Debug.Log("Tethered block!");
@@ -66,7 +64,7 @@ public class GameManager : MonoBehaviour
             
         }
 
-        // if player touches the screen
+        // if player touches the screen and no block has been selected yet
         if (Input.GetMouseButton(0) && interactor.getStatus() == false)
         {
             Ray ray;
@@ -91,7 +89,9 @@ public class GameManager : MonoBehaviour
                     interactor.setStatus(false);
                     interactor.highlightObject(block);
                     isTethered = true;
+
                     enableCanvas();
+                    enableBlockControlPanel();
 
                     // Keep a note of the time the movement started.
                     startTime = Time.time;
@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
                     journeyLength = Vector3.Distance(arCamera.transform.position, block.transform.position);
 
                     //Debug.Log("Journey Length: " + journeyLength);
+
                 }
 
             }
@@ -109,7 +110,7 @@ public class GameManager : MonoBehaviour
         {
             tower.SetActive(true);
             Debug.Log("Tower has been placed");
-
+            
             int piecesCount = tower.transform.childCount;
 
             if (isKinematic)
@@ -129,6 +130,7 @@ public class GameManager : MonoBehaviour
         block.GetComponent<Rigidbody>().useGravity = true;
         block.GetComponent<Rigidbody>().isKinematic = false;
         isTethered = false;
+        disableBlockControlPanel();
         canvas.SetActive(false);
         interactor.unHighlightObject(block);
         block = null;
@@ -150,17 +152,24 @@ public class GameManager : MonoBehaviour
     public void enableCanvas()
     {
         canvas.SetActive(true);
-
-        blockControlPanel.SetActive(true);
-        
-
     }
 
     public void disableCanvas()
     {
         canvas.SetActive(false);
+    }
+
+    public void enableBlockControlPanel()
+    {
+
+        blockControlPanel.SetActive(true);
+     
+    }
+
+    public void disableBlockControlPanel()
+    {
 
         blockControlPanel.SetActive(false);
     }
-    
+
 }
