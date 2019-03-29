@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TopOfTowerPositioning : MonoBehaviour
+public class TutorialTopOfTowerMechanic : MonoBehaviour
 {
     public GameObject topOfTower;
     public GameObject topBlockPos;

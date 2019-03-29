@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     private bool isTethered = false;
     private BlockInteraction interactor;
     private Vector3 offset;
+    private int topStackCount;
 
     // Time when the movement started.
     private float startTime;
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
     {
         interactor = new BlockInteraction();
         releaseBtn.onClick.AddListener(releaseBlock);
+        topStackCount = 0;
     }
 
     // Update is called once per frame
@@ -90,6 +92,9 @@ public class GameManager : MonoBehaviour
                     interactor.highlightObject(block);
                     isTethered = true;
 
+                    //to make the block less sensitive to the other blocks
+                    block.GetComponent<Rigidbody>().mass = 1;
+
                     enableCanvas();
                     enableBlockControlPanel();
 
@@ -133,7 +138,23 @@ public class GameManager : MonoBehaviour
         disableBlockControlPanel();
         canvas.SetActive(false);
         interactor.unHighlightObject(block);
-        block = null;
+        incrementTopStackCount();
+        block.GetComponent<Rigidbody>().mass = 3;
+        //block = null;
+    }
+
+    public void incrementTopStackCount()
+    {
+        if (topStackCount < 3)
+            topStackCount++;
+        else
+            topStackCount = 0;
+
+    }
+
+    public int getTopStackCount()
+    {
+        return topStackCount;
     }
 
     public void unKinematic(int pieces)
