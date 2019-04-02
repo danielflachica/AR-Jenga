@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
         topStackCount = 0;
         ss = new ScoringScript();
         dropZone = false;
+        block = null;
     }
 
     // Update is called once per frame
@@ -148,7 +149,7 @@ public class GameManager : MonoBehaviour
 
     public void releaseBlock()
     {
-        if (dropZone)
+        if (dropZone) // if the block was dropped at the top of the stack
             ss.Score();
 
         block.GetComponent<Rigidbody>().useGravity = true;
