@@ -21,15 +21,20 @@ public class TopOfTowerMechanic : MonoBehaviour
     void Update()
     {
         if (gm.getTopStackCount() == 2)
-            topBlockPos = gm.block;
+        {
 
-        transform.position = new Vector3(topBlockPos.transform.position.x, topBlockPos.transform.position.y + 0.110f, topBlockPos.transform.position.z);
+            topBlockPos = gm.block;
+        }
+
+        transform.position = new Vector3(topBlockPos.transform.position.x, topBlockPos.transform.position.y + 0.150f, topBlockPos.transform.position.z);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == gm.block.name)
-            gm.setDropStatus(true);
+        Debug.Log("Collided with: " + other.name);
+        if(gm.block != null)
+            if(other.name == gm.block.name)
+                gm.setDropStatus(true);
     }
 
 
