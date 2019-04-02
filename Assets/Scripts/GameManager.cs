@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject planeFinder;
     public GameObject canvas;
     public GameObject blockControlPanel;
+    public GameObject gameOverPanel;
     public Button releaseBtn;
     public Text scorePanel;
     private bool isPlaced = false;
@@ -26,6 +27,9 @@ public class GameManager : MonoBehaviour
     private Vector3 blockOriginPos;
     private bool dropZone;
     public GameObject topOfTower;
+    public bool exploding; //game mode
+    public GameObject explosion;
+    private bool gameOver;
 
     // Time when the movement started.
     private float startTime;
@@ -40,101 +44,136 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameOver = false;
         interactor = new BlockInteraction();
         releaseBtn.onClick.AddListener(releaseBlock);
         topStackCount = 0;
         ss = new ScoringScript();
         dropZone = false;
+        block = null;
+
+        if(exploding) //means exploding is enabled
+        {
+            int bombCount = Random.Range(1,tower.transform.childCount),bombIndex;
+
+            while(bombCount > 0) //assign bomb tag
+            {
+                bombIndex = Random.Range(0,tower.transform.childCount);
+
+                tower.transform.GetChild(bombIndex).tag = "bomb";
+                Debug.Log("Bomb tag at block: "+tower.transform.GetChild(bombIndex).name);
+
+                bombCount--;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (isTethered)
+        if (gameOver)
+            gameOverPanel.SetActive(true);
+        else
         {
-            //Debug.Log("Tethered block!");
-
-            // Distance moved = time * speed.
-            float distCovered = (Time.time - startTime) * speed;
-
-            // Fraction of journey completed = current distance divided by total distance.
-            float fracJourney = distCovered / journeyLength;
-
-            // Set our position as a fraction of the distance between the markers.
-            block.transform.position = Vector3.Lerp(block.transform.position, arCamera.transform.position-offset, fracJourney);
-
-            /*Debug.Log("camera position: " + arCamera.transform.localPosition);
-            
-            Debug.Log("block old position: "+ block.transform.localPosition);
-            block.transform.localPosition = arCamera.transform.localPosition + offset;
-            Debug.Log("block new position: " + block.transform.localPosition);*/
-
-            
-        }
-
-        // if player touches the screen and no block has been selected yet
-        if (Input.GetMouseButton(0) && interactor.getStatus() == false)
-        {
-            Ray ray;
-            RaycastHit hit;
-
-            //Debug.Log("Mouse is clicked");
-            ray = arCamera.ScreenPointToRay(Input.mousePosition);
-            hit = new RaycastHit();
-
-            //if player taps a block within range
-            if (Physics.Raycast(ray, out hit, 50))
+            if (isTethered && block != null)
             {
-                if (hit.collider.gameObject.tag == "jengaBlock")
+                //Debug.Log("Tethered block!");
+
+                // Distance moved = time * speed.
+                float distCovered = (Time.time - startTime) * speed;
+
+                // Fraction of journey completed = current distance divided by total distance.
+                float fracJourney = distCovered / journeyLength;
+
+                // Set our position as a fraction of the distance between the markers.
+                block.transform.position = Vector3.Lerp(block.transform.position, arCamera.transform.position - offset, fracJourney);
+
+                /*Debug.Log("camera position: " + arCamera.transform.localPosition);
+
+                Debug.Log("block old position: "+ block.transform.localPosition);
+                block.transform.localPosition = arCamera.transform.localPosition + offset;
+                Debug.Log("block new position: " + block.transform.localPosition);*/
+
+
+            }
+
+            // if player touches the screen and no block has been selected yet
+            if (Input.GetMouseButton(0) && interactor.getStatus() == false)
+            {
+                Ray ray;
+                RaycastHit hit;
+
+                //Debug.Log("Mouse is clicked");
+                ray = arCamera.ScreenPointToRay(Input.mousePosition);
+                hit = new RaycastHit();
+
+                //if player taps a block within range
+                if (Physics.Raycast(ray, out hit, 50))
                 {
+                    if (hit.collider.gameObject.tag == "jengaBlock" || hit.collider.gameObject.tag == "bomb")
+                    {
 
-                    //Debug.Log("Hits jenga block");
-                    block = hit.transform.gameObject;
-                    block.GetComponent<Rigidbody>().useGravity = false;
-                    block.GetComponent<Rigidbody>().isKinematic = true;
-                    //Debug.Log("Touch Detected on block: " + block.name);
-                    offset = arCamera.transform.localPosition - block.transform.localPosition;
-                    interactor.setStatus(false);
-                    interactor.highlightObject(block);
-                    isTethered = true;
+                        //Debug.Log("Hits jenga block");
+                        block = hit.transform.gameObject;
+                        block.GetComponent<Rigidbody>().useGravity = false;
+                        block.GetComponent<Rigidbody>().isKinematic = true;
+                        //Debug.Log("Touch Detected on block: " + block.name);
+                        offset = arCamera.transform.localPosition - block.transform.localPosition;
+                        interactor.setStatus(false);
+                        interactor.highlightObject(block);
+                        isTethered = true;
 
-                    //to make the block less sensitive to the other blocks
-                    block.GetComponent<Rigidbody>().mass = 1;
-                    //get origin pos of block
-                    blockOriginPos = block.transform.position;
+                        //to make the block less sensitive to the other blocks
+                        block.GetComponent<Rigidbody>().mass = 1;
+                        //get origin pos of block
+                        blockOriginPos = block.transform.position;
 
-                    enableCanvas();
-                    enableBlockControlPanel();
+                        enableCanvas();
+                        enableBlockControlPanel();
 
-                    // Keep a note of the time the movement started.
-                    startTime = Time.time;
-                    offset = arCamera.transform.position - block.transform.position;
-                    // Calculate the journey length.
-                    journeyLength = Vector3.Distance(arCamera.transform.position, block.transform.position);
+                        // Keep a note of the time the movement started.
+                        startTime = Time.time;
+                        offset = arCamera.transform.position - block.transform.position;
+                        // Calculate the journey length.
+                        journeyLength = Vector3.Distance(arCamera.transform.position, block.transform.position);
 
-                    //Debug.Log("Journey Length: " + journeyLength);
+                        //Debug.Log("Journey Length: " + journeyLength);
+
+                    }
+
+                    if (hit.transform.gameObject.tag == "bomb") //explode block and destory object
+                    {
+                        Instantiate(explosion, block.transform.position, block.transform.rotation, tower.transform);
+                        Destroy(block);
+                        block = null;
+                        blockControlPanel.SetActive(false);
+                        isTethered = false;
+                        interactor.setStatus(false);
+
+                        gameOver = true;
+                    }
 
                 }
-
             }
-        }
 
-        if (planeFinder.activeSelf == false && isPlaced == false)
-        {
-            tower.SetActive(true);
-            Debug.Log("Tower has been placed");
-            
-            int piecesCount = tower.transform.childCount;
-
-            if (isKinematic)
+            if (planeFinder.activeSelf == false && isPlaced == false)
             {
-                unKinematic(piecesCount);
-                isKinematic = false;
-            }
+                tower.SetActive(true);
+                Debug.Log("Tower has been placed");
 
-            isPlaced = true;
+                int piecesCount = tower.transform.childCount;
+
+                if (isKinematic)
+                {
+                    unKinematic(piecesCount);
+                    isKinematic = false;
+                }
+
+                isPlaced = true;
+            }
         }
+        
 
         scorePanel.text = "Score: "+ss.getScore();
 
@@ -148,8 +187,11 @@ public class GameManager : MonoBehaviour
 
     public void releaseBlock()
     {
-        if (dropZone)
+        if (dropZone) // if the block was dropped at the top of the stack
+        {
             ss.Score();
+            incrementTopStackCount();
+        }
 
         block.GetComponent<Rigidbody>().useGravity = true;
         block.GetComponent<Rigidbody>().isKinematic = false;
@@ -157,7 +199,6 @@ public class GameManager : MonoBehaviour
         disableBlockControlPanel();
         //canvas.SetActive(false);
         interactor.unHighlightObject(block);
-        incrementTopStackCount();
         block.GetComponent<Rigidbody>().mass = 3;
         //block = null;
 
@@ -166,6 +207,8 @@ public class GameManager : MonoBehaviour
 
     public void incrementTopStackCount()
     {
+        Debug.Log("incremented stack count!");
+
         if (topStackCount < 3)
             topStackCount++;
         else
@@ -212,6 +255,11 @@ public class GameManager : MonoBehaviour
     {
 
         blockControlPanel.SetActive(false);
+    }
+
+    public bool getGameStatus()
+    {
+        return gameOver;
     }
 
 }
