@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TutorialTopOfTowerMechanic : MonoBehaviour
 {
-    public GameObject topOfTower;
     public GameObject topBlockPos;
 
     // Start is called before the first frame update

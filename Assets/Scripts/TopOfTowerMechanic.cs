@@ -21,7 +21,10 @@ public class TopOfTowerMechanic : MonoBehaviour
     void Update()
     {
         if (gm.getTopStackCount() == 2)
+        {
+
             topBlockPos = gm.block;
+        }
 
         transform.position = new Vector3(topBlockPos.transform.position.x, topBlockPos.transform.position.y + 0.150f, topBlockPos.transform.position.z);
     }
