@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject blockControlPanel;
     public GameObject gameOverPanel;
     public Button releaseBtn;
+    public Button rotateBtn;
     public Text scorePanel;
     private bool isPlaced = false;
     private bool isKinematic = true;
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         interactor = new BlockInteraction();
         releaseBtn.onClick.AddListener(releaseBlock);
+        rotateBtn.onClick.AddListener(rotateBlock);
         topStackCount = 0;
         ss = new ScoringScript();
         dropZone = false;
@@ -257,6 +259,11 @@ public class GameManager : MonoBehaviour
     public void CloseDrinkingPanel()
     {
         drinkingPanel.SetActive(false);
+    }
+    
+    public void rotateBlock()
+    {
+        block.transform.Rotate(Vector3.up, 50f * Time.deltaTime);
     }
 
     public void incrementTopStackCount()

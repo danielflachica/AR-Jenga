@@ -16,6 +16,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject blockControlPanel;
     public GameObject tutorialPanel;
     public Button releaseBtn;
+    public Button rotateBtn;
     public GameObject topOfTower;
 
     private bool isPlaced = false;
@@ -42,6 +43,7 @@ public class TutorialManager : MonoBehaviour
     {
         interactor = new BlockInteraction();
         releaseBtn.onClick.AddListener(releaseBlock);
+        rotateBtn.onClick.AddListener(rotateBlock);
         tutorialPanel.SetActive(true);
         stepNum = 1;
     }
@@ -168,6 +170,12 @@ public class TutorialManager : MonoBehaviour
             setCompletedStatus(true);
             //topOfTower.SetActive(false);
         }
+    }
+
+    public void rotateBlock()
+    {
+
+        block.transform.Rotate(Vector3.up, 50f * Time.deltaTime);
     }
 
     public void unKinematic(int pieces)
