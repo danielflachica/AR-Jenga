@@ -2190,7 +2190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030518, y: 0}
+  m_AnchoredPosition: {x: 0.000030517578, y: 0}
   m_SizeDelta: {x: 0.000061035, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1153394099
@@ -3100,12 +3100,18 @@ MonoBehaviour:
   planeFinder: {fileID: 1904954454}
   canvas: {fileID: 255576029}
   blockControlPanel: {fileID: 780585092}
-  gameOverPanel: {fileID: 0}
+  gameOverPanel: {fileID: 1153394097}
   releaseBtn: {fileID: 738503228}
+  rotateBtn: {fileID: 1250173495}
   scorePanel: {fileID: 370146886}
   topOfTower: {fileID: 1241888689}
   exploding: 0
   explosion: {fileID: 0}
+  drinking: 0
+  drinkingPanel: {fileID: 0}
+  txtDrinkingTitle: {fileID: 0}
+  txtDrinkingAction: {fileID: 0}
+  btnCloseDrinking: {fileID: 0}
   speed: 1
 --- !u!1 &1838285123
 GameObject:

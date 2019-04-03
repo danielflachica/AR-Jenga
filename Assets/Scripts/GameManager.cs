@@ -212,11 +212,14 @@ public class GameManager : MonoBehaviour
             ss.Score();
             incrementTopStackCount();
 
-            //display dare
-            int i = Random.Range(0, 10); //random index from 0-9 (10 drinking dares/truths)
-            txtDrinkingTitle.text = drinkingTitles[i];
-            txtDrinkingAction.text = drinkingActions[i];
-            drinkingPanel.SetActive(true);
+            if (drinking)
+            {
+                //display dare
+                int i = Random.Range(0, 10); //random index from 0-9 (10 drinking dares/truths)
+                txtDrinkingTitle.text = drinkingTitles[i];
+                txtDrinkingAction.text = drinkingActions[i];
+                drinkingPanel.SetActive(true);
+            }
         }
 
         block.GetComponent<Rigidbody>().useGravity = true;
@@ -263,7 +266,7 @@ public class GameManager : MonoBehaviour
     
     public void rotateBlock()
     {
-        block.transform.Rotate(Vector3.up, 50f * Time.deltaTime);
+        block.transform.Rotate(Vector3.up, 500f * Time.deltaTime);
     }
 
     public void incrementTopStackCount()
