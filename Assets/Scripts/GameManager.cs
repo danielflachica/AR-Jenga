@@ -29,6 +29,13 @@ public class GameManager : MonoBehaviour
     public GameObject topOfTower;
     public bool exploding; //game mode
     public GameObject explosion;
+    public bool drinking; //game mode
+    private string[] drinkingTitles;
+    private string[] drinkingActions;
+    public GameObject drinkingPanel;
+    public Text txtDrinkingTitle;
+    public Text txtDrinkingAction;
+    public Button btnCloseDrinking;
     private bool gameOver;
 
     // Time when the movement started.
@@ -65,6 +72,17 @@ public class GameManager : MonoBehaviour
 
                 bombCount--;
             }
+        }
+
+        if(drinking) //drinking mode enabled
+        {
+            Debug.Log("Drinking mode enabled!");
+
+            drinkingTitles = new string[10];
+            drinkingActions = new string[10];
+            btnCloseDrinking.onClick.AddListener(CloseDrinkingPanel);
+
+            InitDrinkingMode();
         }
     }
 
@@ -191,6 +209,12 @@ public class GameManager : MonoBehaviour
         {
             ss.Score();
             incrementTopStackCount();
+
+            //display dare
+            int i = Random.Range(0, 10); //random index from 0-9 (10 drinking dares/truths)
+            txtDrinkingTitle.text = drinkingTitles[i];
+            txtDrinkingAction.text = drinkingActions[i];
+            drinkingPanel.SetActive(true);
         }
 
         block.GetComponent<Rigidbody>().useGravity = true;
@@ -203,6 +227,36 @@ public class GameManager : MonoBehaviour
         //block = null;
 
         setDropStatus(false);
+    }
+
+    public void InitDrinkingMode()
+    {
+        drinkingTitles[0] = "Truth";
+        drinkingTitles[1] = "Truth";
+        drinkingTitles[2] = "Truth";
+        drinkingTitles[3] = "Truth";
+        drinkingTitles[4] = "Truth";
+        drinkingTitles[5] = "Dare";
+        drinkingTitles[6] = "Dare";
+        drinkingTitles[7] = "Dare";
+        drinkingTitles[8] = "Dare";
+        drinkingTitles[9] = "Dare";
+
+        drinkingActions[0] = "Who in the room do you think would be a bad date?";
+        drinkingActions[1] = "What physical feature do you get complimented on the most?";
+        drinkingActions[2] = "If you were the opposite sex for one hour, what would you do?";
+        drinkingActions[3] = "Have you ever thought of cheating on your boyfriend/girlfriend?";
+        drinkingActions[4] = "Lights on or lights off?";
+        drinkingActions[5] = "Do the Dalagang Pilipina challenge.";
+        drinkingActions[6] = "Dance the Kahit Ayaw Mo Na challenge.";
+        drinkingActions[7] = "Give a foot massage to anyone in the room.";
+        drinkingActions[8] = "Let someone write a word on your forehead in permanent marker.";
+        drinkingActions[9] = "Hug someone intimately for 10 seconds.";
+    }
+
+    public void CloseDrinkingPanel()
+    {
+        drinkingPanel.SetActive(false);
     }
 
     public void incrementTopStackCount()
