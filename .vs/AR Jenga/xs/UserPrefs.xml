@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{B548FFDD-BBAA-CDE7-448C-19EC8CA1CCBF}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SceneSwitcher.cs">
+    <Files>
+      <File FileName="Assets/Scripts/SceneSwitcher.cs" Line="28" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.VuforiaEditorScripts PreferredExecutionTarget="Unity.Editor" />
+</Properties>

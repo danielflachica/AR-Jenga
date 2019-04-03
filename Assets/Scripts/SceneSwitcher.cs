@@ -19,4 +19,19 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("SceneLoader");
     }
+
+    public void LoadModeSelectionScene()
+    {
+        SceneManager.LoadScene("ModeSelection");
+    }
+
+    public void LoadDrinkingModeScene()
+    {
+        SceneManager.LoadScene("DrinkingModeScene");
+    }
+
+    public void LoadExplodeModeScene()
+    {
+        SceneManager.LoadScene("ExplodeModeScene");
+    }
 }
