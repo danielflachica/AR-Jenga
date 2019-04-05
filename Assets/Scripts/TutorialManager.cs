@@ -175,7 +175,7 @@ public class TutorialManager : MonoBehaviour
     public void rotateBlock()
     {
 
-        block.transform.Rotate(Vector3.up, 50f * Time.deltaTime);
+        block.transform.Rotate(Vector3.up, 500f * Time.deltaTime);
     }
 
     public void unKinematic(int pieces)
