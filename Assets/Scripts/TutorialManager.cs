@@ -85,8 +85,8 @@ public class TutorialManager : MonoBehaviour
             ray = arCamera.ScreenPointToRay(Input.mousePosition);
             hit = new RaycastHit();
 
-            //if player taps a block within range
-            if (Physics.Raycast(ray, out hit, 50))
+
+            if (Physics.Raycast(ray, out hit, 50) && getStep() != 7)//if player taps a block within range
             {
                 if (hit.collider.gameObject.tag == "jengaBlock")
                 {
