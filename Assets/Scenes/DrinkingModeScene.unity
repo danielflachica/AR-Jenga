@@ -5093,7 +5093,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DRINKING ACTION TEXT WILL APPEAR HERE.
+  m_Text: WHENEVER YOU SCORE, A TRUTH OR DARE WILL APPEAR HERE. ARE YOU READY?
 --- !u!222 &1836083958
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5609,7 +5609,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DARE TYPE
+  m_Text: DRINKING MODE
 --- !u!222 &1971614472
 CanvasRenderer:
   m_ObjectHideFlags: 0
